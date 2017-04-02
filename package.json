@@ -1,0 +1,33 @@
+{
+  "name": "pgh-art-management-system",
+  "version": "0.0.0",
+  "description": "An art event management application that uses location data to encourage visitors and residents to interact with the art exhibits and performances going on in their communities.",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickjamesbeam/PGH-Art-Management-System.git"
+  },
+  "keywords": [
+    "Art",
+    "Event",
+    "Management",
+    "Interaction",
+    "Location"
+  ],
+  "authors": [
+    "Patrick Beam",
+    "Anastasia Lanz",
+    "Benjamin Mosior",
+    "Kelly Werner"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrickjamesbeam/PGH-Art-Management-System/issues"
+  },
+  "homepage": "https://github.com/patrickjamesbeam/PGH-Art-Management-System#readme"
+}
