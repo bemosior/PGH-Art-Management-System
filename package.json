@@ -4,9 +4,12 @@
   "description": "An art event management application that uses location data to encourage visitors and residents to interact with the art exhibits and performances going on in their communities.",
   "main": "app.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/nodemon/bin/nodemon.js"
   },
   "repository": {
     "type": "git",
