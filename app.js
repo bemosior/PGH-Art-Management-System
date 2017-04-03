@@ -12,7 +12,6 @@ app.use(compression({
 var cfenv = require('cfenv');
 var path = require('path');
 var request = require('request');
-var d3 = require('d3');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var favicon = require('serve-favicon');
