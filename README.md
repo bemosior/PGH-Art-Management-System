@@ -13,4 +13,6 @@ Unblurred / Westmoreland App
 ## Anastasia's Development Setup
 1. Install homebrew
 2. Install node
-3. Install `npm install -g ionic cordova`
+3. You could use yarn instead of npm for this project. Yarn is faster. [Yarn Website](https://yarnpkg.com/en/)
+4. `npm install` installs the dependencies
+5. Install `npm install -g ionic cordova`
