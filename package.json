@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+ "name": "pgh-art-management-system",
+  "version": "0.0.2",
+  "description": "An art event management application that uses location data to encourage visitors and residents to interact with the art exhibits and performances going on in their communities.",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -43,5 +43,33 @@
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],
-  "description": "eventsMap: An Ionic project"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickjamesbeam/PGH-Art-Management-System.git"
+  },
+  "engines": {
+    "node": "6.x"
+  },
+  "keywords": [
+    "Art",
+    "Event",
+    "Management",
+    "Interaction",
+    "Location",
+    "PGH",
+    "Pittsburgh",
+    "Codefest"
+  ],
+  "authors": [
+    "Patrick Beam",
+    "Anastasia Lanz",
+    "Benjamin Mosior",
+    "Kurt Novack",
+    "Kelly Werner"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrickjamesbeam/PGH-Art-Management-System/issues"
+  },
+  "homepage": "https://github.com/patrickjamesbeam/PGH-Art-Management-System#readme"
 }
