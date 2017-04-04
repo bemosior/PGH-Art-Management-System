@@ -17,3 +17,5 @@ Unblurred / Westmoreland App
 4. `npm install` installs the dependencies
 5. Install `npm install -g ionic cordova`
 6. `ionic serve`
+
+[Ionic Framework](https://ionicframework.com/)
