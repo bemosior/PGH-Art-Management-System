@@ -24516,3 +24516,7 @@ ion-navbar.toolbar {
     padding-top: calc(16px + 20px);
   }
 }
+
+page-map .sebm-google-map-container {
+  height: 100%;
+}
