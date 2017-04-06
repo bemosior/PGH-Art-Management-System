@@ -26,6 +26,10 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+# rebuildable files
+www
+platforms/android
+
 # Dependency directories
 node_modules
 jspm_packages
