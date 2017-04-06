@@ -8,6 +8,15 @@
 
 <ion-content>
   <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-    <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+    <div *ngFor="let event of events">
+      <sebm-google-map-marker [latitude]="event.lat" [longitude]="event.lng" [title]="event.venue_name" openInfoWindow="true">
+        <sebm-google-map-info-window [disableAutoPan]="true">
+          <h1>{{event.venue_name}}</h1>
+          <h3>{{event.date}}: {{event.start_time}} - {{event.end_time}}</h3>
+          <p>{{event.hundred_word_description}}</p>
+        </sebm-google-map-info-window>
+      </sebm-google-map-marker>
+    </div>
   </sebm-google-map>
 </ion-content>
+
