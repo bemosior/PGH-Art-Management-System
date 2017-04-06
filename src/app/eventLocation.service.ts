@@ -4,7 +4,7 @@ import { EVENT_LOCATIONS } from './mock-eventLocation';
 
 @Injectable()
 export class EventLocationService {
-    getEventLocations(): EventLocation[] {
-        return EVENT_LOCATIONS;
+    getEventLocations(): Promise<EventLocation[]> {
+        return Promise.resolve(EVENT_LOCATIONS);
     }
 }
