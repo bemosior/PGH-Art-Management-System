@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { EventLocation } from '../../app/eventLocation';
-import { EventLocationService } from '../../app/eventLocation.service';
+import { Event } from '../../app/event';
+import { EventService } from '../../app/event.service';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -8,21 +8,27 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'map.html'
 })
 export class MapPage {
-  eventLocations: EventLocation[];
-  lat: number = 40.4406;
-  lng: number = -79.9959;
+  events: Event[];
+  lat: number = 40.465474;
+  lng: number = -79.944844;
   zoom: number = 14;
 
-  constructor(public navCtrl: NavController, private eventLocationService: EventLocationService) {
+  constructor(public navCtrl: NavController, private eventService: EventService) {
 
   }
 
-  getEventLocations(): void {
-    this.eventLocationService.getEventLocations().then(eventLocations => this.eventLocations = eventLocations);
+  getEvents(): void {
+    this.eventService.getEvents()
+      .subscribe(
+        events => this.events = events,
+        err => {
+          console.log(err);
+        }
+      );
   }
 
   ngOnInit(): void {
-    this.getEventLocations();
+    this.getEvents();
   }
 
 }

@@ -1,7 +1,8 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { EventLocationService } from './eventLocation.service';
+import { EventService } from './event.service';
+import { HttpModule } from '@angular/http';
 import { MapPage } from '../pages/map/map';
 import { ProfilePage } from '../pages/profile/profile';
 import { HomePage } from '../pages/home/home';
@@ -21,6 +22,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     TabsPage
   ],
   imports: [
+    HttpModule,
     IonicModule.forRoot(MyApp),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD2GfULjbr99T-Oi377dahA8E5F1EkNHnI'
@@ -35,7 +37,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     TabsPage
   ],
   providers: [
-    EventLocationService,
+    EventService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

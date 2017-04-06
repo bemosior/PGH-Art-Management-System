@@ -8,8 +8,8 @@
 
 <ion-content>
   <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-    <div *ngFor="let eventLocation of eventLocations">
-      <sebm-google-map-marker [latitude]="eventLocation.lat" [longitude]="eventLocation.lng"></sebm-google-map-marker>
+    <div *ngFor="let event of events">
+      <sebm-google-map-marker [latitude]="event.lat" [longitude]="event.lng"></sebm-google-map-marker>
     </div>
   </sebm-google-map>
 </ion-content>
