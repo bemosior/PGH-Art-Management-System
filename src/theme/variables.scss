@@ -5,15 +5,6 @@ $font-path: "../assets/fonts";
 @import "ionic.globals";
 
 
-// Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
-
-
-
 
 // Named Color Variables
 // --------------------------------------------------
@@ -33,10 +24,26 @@ $colors: (
 );
 
 
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+$toolbar-background: color($colors, primary);
+
+$tabs-background: color($colors, dark);
+
+
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+$tabs-ios-tab-color-inactive: color($colors, light);
+$tabs-ios-tab-color-active: color($colors, primary);
 
 
 
@@ -44,6 +51,8 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
+$tabs-md-tab-color-inactive: color($colors, light);
+$tabs-md-tab-color-active: color($colors, primary);
 
 
 
@@ -51,6 +60,8 @@ $colors: (
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
+$tabs-wp-tab-color-active: color($colors, primary);
+$tabs-wp-tab-color-inactive: color($colors, light);
 
 
 
@@ -62,19 +73,6 @@ $colors: (
 // default are overridden.
 
 @import "ionic.theme.default";
-
-$toolbar-background: color($colors, primary);
-
-$tabs-background: color($colors, dark);
-$tabs-ios-tab-color-inactive: color($colors, light);
-$tabs-md-tab-color-inactive: color($colors, light);
-$tabs-wp-tab-color-inactive: color($colors, light);
-
-$tabs-ios-tab-color-active: color($colors, primary);
-$tabs-md-tab-color-active: color($colors, primary);
-$tabs-wp-tab-color-active: color($colors, primary);
-
-
 
 // Ionicons
 // --------------------------------------------------
