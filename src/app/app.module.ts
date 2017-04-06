@@ -8,6 +8,9 @@ import { MapPage } from '../pages/map/map';
 import { ProfilePage } from '../pages/profile/profile';
 import { HomePage } from '../pages/home/home';
 import { EventListPage } from '../pages/event-list/event-list';
+import { EventPage } from '../pages/event/event';
+import { HostListPage } from '../pages/host-list/host-list';
+import { HostPage } from '../pages/host/host';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { AuthService } from '../providers/auth-service';
@@ -23,6 +26,9 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     MapPage,
     ProfilePage,
     EventListPage,
+    EventPage,
+    HostListPage,
+    HostPage,
     HomePage,
     TabsPage
   ],
@@ -41,6 +47,9 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     ProfilePage,
     HomePage,
     EventListPage,
+    EventPage,
+    HostListPage,
+    HostPage,
     TabsPage
   ],
   providers: [
