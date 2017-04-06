@@ -11,12 +11,10 @@ import { LoginPage } from '../login/login';
 })
 export class HomePage {
   username = '';
-  email = '';
 
   constructor(private navCtrl: NavController, private auth: AuthService) {
     let info = this.auth.getUserInfo();
-    this.username = info.name;
-    this.email = info.email;
+    this.username = info.username;
   }
 
   public logout() {
