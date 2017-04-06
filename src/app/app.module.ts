@@ -5,6 +5,7 @@ import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
 import { ProfilePage } from '../pages/profile/profile';
 import { HomePage } from '../pages/home/home';
+import { EventListPage } from '../pages/event-list/event-list';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { AuthService } from '../providers/auth-service';
@@ -19,6 +20,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     LoginPage,
     MapPage,
     ProfilePage,
+    EventListPage,
     HomePage,
     TabsPage
   ],
@@ -35,6 +37,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     MapPage,
     ProfilePage,
     HomePage,
+    EventListPage,
     TabsPage
   ],
   providers: [

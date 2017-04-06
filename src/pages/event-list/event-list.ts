@@ -3,13 +3,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-map',
-  templateUrl: 'map.html'
+  selector: 'page-event-list',
+  templateUrl: 'event-list.html'
 })
-export class MapPage {
-  lat: number = 40.4406;
-  lng: number = -79.9959;
-  zoom: number = 14;
+export class EventListPage {
 
   constructor(public navCtrl: NavController) {
 

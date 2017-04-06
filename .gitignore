@@ -26,6 +26,10 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+# rebuildable files
+www
+platforms/android
+
 # Dependency directories
 node_modules
 jspm_packages
@@ -35,9 +39,6 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
-
-# Vagrant
-.vagrant
 
 # Mac stuff
 .DS_Store
