@@ -39,6 +39,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-position: center;
   background-size: cover;
   position: relative;
   &::before {
@@ -104,7 +105,8 @@ ion-label {
   white-space: normal;
 }
 
-h2 {
+h2,
+ion-card-title {
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }

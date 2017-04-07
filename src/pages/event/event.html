@@ -4,6 +4,16 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Single Event</h2>
+<ion-content>
+  <ion-row *ngIf="event">
+    <ion-col class="top-nav event">
+      <span>{{event.title}}</span>
+    </ion-col>
+  </ion-row>
+  <ion-row class="check-in">
+    <button ion-button [color]="isGoing ? 'secondaryDark' : 'primary'" (click)="checkIn()">
+      <span *ngIf="isGoing">I'm Going</span>
+      <span *ngIf="!isGoing">Check In</span>
+    </button>
+  </ion-row>
 </ion-content>
