@@ -17,6 +17,7 @@ import { EventService } from '../providers/event.service';
 import { AuthService } from '../providers/auth.service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SpinnerDialog } from '@ionic-native/spinner-dialog';
 import { Geolocation } from '@ionic-native/geolocation';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -62,6 +63,7 @@ import { TruncatePipe } from './truncate.pipe';
     AuthService,
     StatusBar,
     SplashScreen,
+    SpinnerDialog,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

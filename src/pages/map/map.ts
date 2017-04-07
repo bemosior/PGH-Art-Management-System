@@ -3,7 +3,7 @@ import { Event } from '../../providers/event';
 import { EventService } from '../../providers/event.service';
 import { Geolocation } from '@ionic-native/geolocation';
 import { NavController } from 'ionic-angular';
-import { Platform } from 'ionic-angular';
+import { SpinnerDialog } from '@ionic-native/spinner-dialog';
 
 @Component({
   selector: 'page-map',
@@ -16,24 +16,23 @@ export class MapPage {
   iconUrl: string = 'https://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png';
   zoom: number = 11;
 
-  constructor(public navCtrl: NavController, private eventService: EventService, private platform: Platform, private geolocation: Geolocation) {
+  constructor(public navCtrl: NavController, private eventService: EventService, private geolocation: Geolocation, private spinnerDialog: SpinnerDialog) {
 
   }
 
   getPosition(): void {
-    var subscription = this.geolocation.watchPosition()
-      .subscribe(
-        pos => { 
+    this.spinnerDialog.show();
+    var subscription = this.geolocation.getCurrentPosition()
+      .then((pos) => {
           this.lat = pos.coords.latitude,
           this.lng = pos.coords.longitude
-        },
-        err => {
+          this.spinnerDialog.hide();
+      })
+      .catch((err) => {
           console.log(err);
           // Fall back to event-based focus.
           this.calculateFocus();
-        },
-        () => { subscription.unsubscribe(); }
-      );
+      })
   }
 
   getEvents(): void {
