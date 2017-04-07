@@ -33,4 +33,12 @@ export class EventService {
         return homeEvents;
       }).catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
+
+  getEvent(id: number) {
+    return this.http.get('./assets/seed.json')
+      .map((res: Response) => {
+        let event = res.json().find((e) => e.id === id);
+        return event;
+      })
+  }
 }

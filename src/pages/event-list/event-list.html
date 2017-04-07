@@ -4,8 +4,13 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Events List</h2>
+<ion-content>
+  <ion-row *ngIf="event">
+    <ion-col class="top-nav event">
+      <span>{{event.title}}</span>
+    </ion-col>
+  </ion-row>
+
   <ion-card>
     <img src="assets/img/assemble.png"/>
     <ion-card-content>
@@ -13,7 +18,7 @@
         Assemble
       </ion-card-title>
       <p>4828 Penn Ave.</p>
-      <p>6:00 - 10:00pm</p>
+      <h5>6:00 - 10:00pm</h5>
       <p>
         Loryn Bertoti, a mixed-media artist with a background in engineering and fabrication, is Assemble's April Unblurred artist. Loryn's exhibition for the April show will be a large tessellating pattern of two main elements.
       </p>
