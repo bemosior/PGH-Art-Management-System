@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>ArtNado</ion-title>
+    <ion-title>Artulary</ion-title>
     <!--<ion-buttons end>
       <button ion-button (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
@@ -23,8 +23,27 @@
     <ion-item *ngFor="let event of events;" (click)="goToEvent(event)">
       <h2>{{event.title}}</h2>
       <h5>{{event.date | date:'shortDate'}} <span>{{event.start_time}}</span></h5>
-      <p>{{(event.hundred_word_description | truncate:70)}}</p>
+      <p>{{event.hundred_word_description | truncate:70}}</p>
       <span class="details price">{{event.suggested_donation}}</span>
+
+      <ion-row class="guests">
+        <ion-avatar>
+          <img src="../../assets/img/person1.jpg">
+        </ion-avatar>
+        <ion-avatar>
+          <img src="../../assets/img/person2.jpg">
+        </ion-avatar>
+        <ion-avatar>
+          <img src="../../assets/img/person3.jpg">
+        </ion-avatar>
+        <ion-avatar>
+          <img src="../../assets/img/person4.jpg">
+        </ion-avatar>
+        <ion-avatar>
+          <img src="../../assets/img/person5.jpg">
+        </ion-avatar>
+        <span>+</span>
+      </ion-row>
 
       <ion-thumbnail item-right>
         <img src="../../assets/img/ribbons.jpg">

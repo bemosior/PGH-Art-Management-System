@@ -88,6 +88,24 @@
       height: 80px;
     }
   }
+  .guests {
+    padding-top: 4px;
+    ion-avatar {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      min-height: 20px;
+      margin-right: 6px;
+      img {
+        width: 20px;
+        height: 20px;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+      }
+    }
+    span {
+      color: color($colors, medium);
+    }
+  }
 
   p {
     margin-bottom: 16px;

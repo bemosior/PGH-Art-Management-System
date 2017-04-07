@@ -16,4 +16,11 @@
       <span *ngIf="!isGoing">Check In</span>
     </button>
   </ion-row>
+  <ion-row padding *ngIf="event">
+    <ion-col col-12>
+      <h2>{{event.title}}</h2>
+      <h5>{{event.date | date:'shortDate'}} <span>{{event.start_time}}</span></h5>
+      <p>{{event.hundred_word_description}}</p>
+    </ion-col>
+  </ion-row>
 </ion-content>

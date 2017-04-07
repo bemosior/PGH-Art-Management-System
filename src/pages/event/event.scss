@@ -20,4 +20,16 @@ page-event {
       background-color: color($colors, secondaryDark);
     }
   }
+
+  h2 {
+    margin-bottom: 0;
+    font-size: 18px;
+    display: block;
+  }
+  h5 {
+    margin-top: 0;
+  }
+  p {
+    color: color($colors, medium);
+  }
 }
