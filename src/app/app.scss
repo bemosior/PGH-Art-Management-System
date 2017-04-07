@@ -16,6 +16,9 @@
 // automatically applied to the <body> element in the app.
 
 .tabs {
+  &-md .tab-button[aria-selected="true"] {
+    color: #FFF;
+  }
   .tab-button-text {
     text-transform: uppercase;
     font-size: 18px;
