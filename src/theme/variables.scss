@@ -15,14 +15,14 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:       #53346D,
-  primaryLight:  #BFE4F3,
-  secondary:     #CDE39F,
-  secondaryDark: #71DD37,
-  danger:        #f53d3d,
-  light:         #f4f4f4,
-  dark:          #222,
-  medium:        #555
+  primary:        #53346D,
+  secondary:      #0098D2,
+  secondaryLight: #BFE4F3,
+  checkin:        #71DD37,
+  danger:         #F53D3D,
+  light:          #F4F4F4,
+  dark:           #222,
+  medium:         #555
 );
 
 
@@ -45,7 +45,7 @@ $tabs-background: color($colors, dark);
 // iOS only Sass variables can go here
 
 $tabs-ios-tab-color-inactive: color($colors, light);
-$tabs-ios-tab-color-active: color($colors, primary);
+$tabs-ios-tab-color-active: color($colors, secondary);
 
 
 
@@ -54,7 +54,7 @@ $tabs-ios-tab-color-active: color($colors, primary);
 // Material Design only Sass variables can go here
 
 $tabs-md-tab-color-inactive: color($colors, light);
-$tabs-md-tab-color-active: color($colors, primary);
+$tabs-md-tab-color-active: color($colors, secondary);
 
 
 
@@ -62,7 +62,7 @@ $tabs-md-tab-color-active: color($colors, primary);
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
-$tabs-wp-tab-color-active: color($colors, primary);
+$tabs-wp-tab-color-active: color($colors, secondary);
 $tabs-wp-tab-color-inactive: color($colors, light);
 
 
