@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { EventService } from './event.service';
+import { Geolocation } from '@ionic-native/geolocation';
 import { HttpModule } from '@angular/http';
 import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
@@ -54,6 +55,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
   ],
   providers: [
     EventService,
+    Geolocation,
     AuthService,
     StatusBar,
     SplashScreen,
