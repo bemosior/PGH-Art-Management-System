@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Event } from '../../providers/event';
 import { EventService } from '../../providers/event.service';
+import { Geolocation } from '@ionic-native/geolocation';
 import { NavController } from 'ionic-angular';
+import { SpinnerDialog } from '@ionic-native/spinner-dialog';
 
 @Component({
   selector: 'page-map',
@@ -11,9 +13,25 @@ export class MapPage {
   events: Event[];
   lat: number;
   lng: number;
-  zoom: number = 14;
+  iconUrl: string = 'https://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png';
+  zoom: number = 11;
 
-  constructor(public navCtrl: NavController, private eventService: EventService) {}
+  constructor(public navCtrl: NavController, private eventService: EventService, private geolocation: Geolocation, private spinnerDialog: SpinnerDialog) {}
+
+  getPosition(): void {
+    this.spinnerDialog.show();
+    var subscription = this.geolocation.getCurrentPosition()
+      .then((pos) => {
+          this.lat = pos.coords.latitude,
+          this.lng = pos.coords.longitude
+          this.spinnerDialog.hide();
+      })
+      .catch((err) => {
+          console.log(err);
+          // Fall back to event-based focus.
+          this.calculateFocus();
+      })
+  }
 
   getEvents(): void {
     this.eventService.getEvents()
@@ -21,8 +39,7 @@ export class MapPage {
         events => this.events = events,
         err => {
           console.log(err);
-        },
-        () => this.calculateFocus()
+        }
       );
   }
 
@@ -46,6 +63,7 @@ export class MapPage {
   }
 
   ngOnInit(): void {
+    this.getPosition();
     this.getEvents();
   }
 
