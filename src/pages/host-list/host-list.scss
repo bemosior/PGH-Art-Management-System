@@ -1,3 +1,32 @@
 page-host-list {
+  .hosts {
+    background-image: url('/assets/img/wine.jpg');
+  }
+  .host-search {
+    background-color: color($colors, medium);
+    padding: 8px 0;
+    ion-label {
+      text-transform: uppercase;
+      font-size: 12px;
+      text-align: center;
+      color: color($colors, secondary);
+      margin-bottom: 0;
+    }
+  }
 
+  .searchbar-ios,
+  .searchbar-md,
+  .searchbar-wp {
+    background: none;
+    margin-bottom: 8px;
+  }
+
+  [col-2] {
+    text-align: center;
+    ion-label {
+      margin: 4px 0 0;
+      font-size: 10px;
+      color: #FFFFFF;
+    }
+  }
 }
