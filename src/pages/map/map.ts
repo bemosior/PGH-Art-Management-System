@@ -20,7 +20,7 @@ export class MapPage {
 
   getPosition(): void {
     this.spinnerDialog.show();
-    var subscription = this.geolocation.getCurrentPosition()
+    this.geolocation.getCurrentPosition()
       .then((pos) => {
           this.lat = pos.coords.latitude,
           this.lng = pos.coords.longitude
