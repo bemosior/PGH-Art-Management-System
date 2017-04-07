@@ -13,9 +13,7 @@ export class MapPage {
   lng: number;
   zoom: number = 14;
 
-  constructor(public navCtrl: NavController, private eventService: EventService) {
-
-  }
+  constructor(public navCtrl: NavController, private eventService: EventService) {}
 
   getEvents(): void {
     this.eventService.getEvents()
