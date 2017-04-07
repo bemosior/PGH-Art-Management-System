@@ -1,0 +1,21 @@
+ion-app {
+  .login-content {
+    background: linear-gradient(to bottom, #53346D, #000000);
+    &[padding] h1 {
+      color: #FFF;
+      margin-top: 5rem;
+      text-align: center;
+      font-size: 5rem;
+      font-family: 'Pathway Gothic One', sans-serif;
+    }
+    .login-box {
+      width: 300px;
+      margin: 5rem auto 0 auto;
+      .submit-btn {
+        background-color: transparent;
+        border: 1px solid #FFF;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
