@@ -19,6 +19,12 @@
               <ion-card-title>
                 {{event.title}}
               </ion-card-title>
+              <ion-row class="check-in">
+                <button ion-button [color]="isGoing[event.id] ? 'checkin' : 'secondary'" (click)="checkIn(event.id)">
+                  <span *ngIf="isGoing[event.id]">I'm Going</span>
+                  <span *ngIf="!isGoing[event.id]">Check In</span>
+                </button>
+              </ion-row>
               <p>{{event.address}}</p>
               <h5>{{event.start_time}}</h5>
               <p>
