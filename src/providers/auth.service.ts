@@ -15,16 +15,16 @@ export class AuthService {
   currentUser: User;
 
   public login(credentials) {
-    // if (credentials.use === null || credentials.password === null) {
-      // return Observable.throw("Please insert credentials");
-    // } else {
+    if (credentials.use === null || credentials.password === null) {
+      return Observable.throw("Please insert credentials");
+    } else {
       return Observable.create(observer => {
         // At this point make a request to your backend to make a real check!
         this.currentUser = new User('Test123');
         observer.next(true);
         observer.complete();
       });
-    // }
+    }
   }
 
   public getUserInfo() : User {

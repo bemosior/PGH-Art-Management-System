@@ -19,8 +19,8 @@ export class HomePage {
   events: Event[];
 
   constructor(private navCtrl: NavController, private auth: AuthService, private eventService: EventService) {
-    // let info = this.auth.getUserInfo();
-    // this.username = info.username;
+    let info = this.auth.getUserInfo();
+    this.username = info.username;
   }
 
   getEvents(): void {
