@@ -6,6 +6,54 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Host List here</h2>
+<ion-content>
+  <ion-row>
+    <ion-col class="top-nav hosts">
+      <span>Search by <br>Host</span>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="host-search">
+    <ion-col col-12>
+      <ion-label>Search Hosts</ion-label>
+      <ion-searchbar></ion-searchbar>
+      <ion-label>Event Type</ion-label>
+    </ion-col>
+
+    <ion-col col-2>
+      <ion-checkbox color="light"></ion-checkbox>
+      <ion-label>Free</ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <ion-checkbox color="light" checked="true"></ion-checkbox>
+      <ion-label>Gallery</ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <ion-checkbox color="light" checked="true"></ion-checkbox>
+      <ion-label>Family</ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <ion-checkbox color="light"></ion-checkbox>
+      <ion-label>Outdoor</ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <ion-checkbox color="light"></ion-checkbox>
+      <ion-label>21+</ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <ion-checkbox color="light"></ion-checkbox>
+      <ion-label>Festival</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item *ngFor="let host of hosts;" (click)="goToHost(host.id)">
+      <h2>{{host.name}}</h2>
+      <h5>{{host.type}}</h5>
+
+      <ion-avatar item-right>
+        <img src="../../assets/img/dj.jpg">
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -14,6 +14,7 @@ import { HostPage } from '../pages/host/host';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { EventService } from '../providers/event.service';
+import { HostService } from '../providers/host.service';
 import { AuthService } from '../providers/auth.service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -60,6 +61,7 @@ import { TruncatePipe } from './truncate.pipe';
   providers: [
     EventService,
     Geolocation,
+    HostService,
     AuthService,
     StatusBar,
     SplashScreen,

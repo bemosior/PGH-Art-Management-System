@@ -1,3 +1,23 @@
 page-event {
+  .event {
+    background-image: url('/assets/img/ribbons.jpg');
+    height: 160px;
+  }
 
+  .check-in {
+    justify-content: center;
+    button {
+      margin: 0;
+      transform: translateY(-50%);
+      border-radius: 0;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .going {
+      background-color: color($colors, secondaryDark);
+    }
+  }
 }

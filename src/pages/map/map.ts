@@ -16,9 +16,7 @@ export class MapPage {
   iconUrl: string = 'https://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png';
   zoom: number = 11;
 
-  constructor(public navCtrl: NavController, private eventService: EventService, private geolocation: Geolocation, private spinnerDialog: SpinnerDialog) {
-
-  }
+  constructor(public navCtrl: NavController, private eventService: EventService, private geolocation: Geolocation, private spinnerDialog: SpinnerDialog) {}
 
   getPosition(): void {
     this.spinnerDialog.show();

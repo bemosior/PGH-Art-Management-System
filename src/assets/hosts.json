@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Westmoreland Museum of American Art",
+    "type": "Organization"
+  },
+  {
+    "id": 2,
+    "name": "Jamie M.",
+    "type": "Host"
+  },
+  {
+    "id": 3,
+    "name": "Pittsburgh Cultural Trust",
+    "type": "Organization"
+  },
+  {
+    "id": 4,
+    "name": "AIGA",
+    "type": "Organization"
+  }
+]
