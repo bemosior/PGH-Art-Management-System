@@ -16,6 +16,9 @@ export class MapPage {
   iconUrl: string = 'https://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png';
   zoom: number = 11;
 
+  // This is a demo hack to fake the check-in functionality.
+  isGoing = [];
+
   constructor(public navCtrl: NavController, private eventService: EventService, private geolocation: Geolocation, private spinnerDialog: SpinnerDialog) {}
 
   getPosition(): void {
@@ -60,6 +63,11 @@ export class MapPage {
     this.lng = lngs.reduce(function(a, b) {
       return a + b;
     }) / lats.length;
+  }
+
+
+  checkIn(id): void {
+    this.isGoing[id] = true;
   }
 
   ngOnInit(): void {
