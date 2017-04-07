@@ -11,7 +11,7 @@
     </ion-col>
   </ion-row>
   <ion-row class="check-in">
-    <button ion-button [color]="isGoing ? 'secondaryDark' : 'primary'" (click)="checkIn()">
+    <button ion-button [color]="isGoing ? 'checkin' : 'secondary'" (click)="checkIn()">
       <span *ngIf="isGoing">I'm Going</span>
       <span *ngIf="!isGoing">Check In</span>
     </button>
