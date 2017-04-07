@@ -26,3 +26,52 @@
     transform: none;
   }
 }
+
+.list-ios,
+.list-md,
+.list-wp {
+  margin: 0;
+}
+
+.item-block.item-ios,
+.item-block.item-md,
+.item-block.item-wp {
+  align-items: flex-start;
+  padding-left: 0;
+  .item-inner {
+    padding-left: 16px;
+    padding-right: 0;
+  }
+  ion-thumbnail {
+    width: 120px;
+    height: 80px;
+    img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+    }
+  }
+  p {
+    margin-bottom: 16px;
+  }
+
+  .details {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    color: color($colors, primary);
+  }
+}
+
+ion-label {
+  white-space: normal;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+h5 {
+  color: color($colors, secondaryDark);
+}
