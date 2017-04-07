@@ -1,8 +1,8 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { EventService } from './event.service';
 import { HttpModule } from '@angular/http';
+
 import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
 import { ProfilePage } from '../pages/profile/profile';
@@ -13,11 +13,13 @@ import { HostListPage } from '../pages/host-list/host-list';
 import { HostPage } from '../pages/host/host';
 import { TabsPage } from '../pages/tabs/tabs';
 
-import { AuthService } from '../providers/auth-service';
+import { EventService } from '../providers/event.service';
+import { AuthService } from '../providers/auth.service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     HostListPage,
     HostPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    TruncatePipe
   ],
   imports: [
     HttpModule,

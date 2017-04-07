@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Event } from '../../app/event';
-import { EventService } from '../../app/event.service';
+import { Event } from '../../providers/event';
+import { EventService } from '../../providers/event.service';
 import { NavController } from 'ionic-angular';
 
 @Component({

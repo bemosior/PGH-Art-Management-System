@@ -1,5 +1,5 @@
 {
- "name": "pgh-art-management-system",
+  "name": "pgh-art-management-system",
   "version": "0.0.2",
   "description": "An art event management application that uses location data to encourage visitors and residents to interact with the art exhibits and performances going on in their communities.",
   "private": true,
